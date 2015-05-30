@@ -1,21 +1,166 @@
 {{!< default}}
-<div class="container">
-	<div class="jumbotron"><img src="/images/logo.svg" width="160">
-		<h1>Welcome</h1>
-		<p>This is your new <a href='http://keystonejs.com', target='_blank'>KeystoneJS</a> website.</p>
-		<p>
-			It includes the latest versions of
-			<a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
-			and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
-		</p>
-		<p>Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.</p>
-		<hr>
-		<p>We have created a default Admin user for you with the email <strong>user@keystonejs.com</strong> and the password <strong>password</strong>.</p>
-		<p><a href="/keystone/signin" style="margin-right: 10px" class="btn btn-lg btn-primary">Sign in</a> to use the Admin UI.</p>
-		<hr>
-		<p>
-			Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
-			<a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.
-		</p>
-	</div>
+
+<!--{{{data.pageSections.0.content.brief}}}
+{{{data.pageSections.1.content.brief}}}-->
+
+
+<header>
+    <nav class="mobile_nav nav-up">
+        <div class="mobile_nav__menu"></div>
+        <div class="mobile_nav__links">
+            <a href="#home_section" class="home">Home</a>
+            <a href="#about_section" class="about">About</a>
+            <a href="#experience_section" class="experience">Experience</a>
+            <a href="#skills_section" class="skills">Other Skills</a>
+            <a href="#samples_section" class="samples">Samples</a>
+            <a href="#contact_section" class="contact">Contact</a>
+        </div>
+    </nav>
+</header>
+
+<div class="tablet_nav">
+    <div class="table_nav_container">
+        <a href="#home_section" class="home">Home</a>
+        <a href="#about_section" class="about">About</a>
+        <a href="#experience_section" class="experience">Experience</a>
+        <a href="#skills_section" class="skills">Skills</a>
+        <a href="#samples_section" class="samples">Samples</a>
+        <a href="#contact_section" class="contact">Contact</a>
+    </div>
 </div>
+
+<nav class="desktop_nav">
+    <div class="desktop_nav__links">
+        <ul>
+            <li><span></span><a href="#home_section" class="home">Home</a></li>
+            <li><span></span><a href="#about_section" class="about">About</a></li>
+            <li><span></span><a href="#experience_section" class="experience">Experience</a></li>
+            <li><span></span><a href="#skills_section" class="skills">Other Skills</a></li>
+            <li><span></span><a href="#samples_section" class="samples">Samples</a></li>
+            <li><span></span><a href="#contact_section" class="contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="title">
+    <!--<p class="page_title">Amy Foxworthy</p>
+    <p class="page_title">Writer, Editor, and<br /> Content Creator</p>-->
+
+    <p class="page_title">Amy Foxworthy</p>
+    <p class="page_title">{{{data.pageSections.0.section.title}}}</p>
+</section>
+
+<img class="logo" src="img/logo.png" alt="Amy Foxworthy Writing, Editing, and Content Creation">
+
+<section id="home_section">
+    <section id="home" class="home_content content">
+        {{{data.pageSections.0.section.content}}}
+    </section>
+</section>
+
+<section id="about_section">
+    <h2 class="section_title">{{{data.pageSections.1.section.title}}}</h2>
+    <section id="about" class="about_content content">
+        {{{data.pageSections.1.section.content}}}
+    </section>
+</section>
+
+<section id="experience_section">
+    <h2 class="section_title">{{{data.pageSections.2.section.title}}}</h2>
+    <section id="experience" class="experience_content content">
+        {{{data.pageSections.2.section.content}}}
+    </section>
+</section>
+
+<section id="skills_section">
+    <h2 class="section_title">{{{data.pageSections.3.section.title}}}</h2>
+    <section id="skills" class="skills_content content">
+        {{{data.pageSections.3.section.content}}}
+    </section>
+</section>
+
+<section id="samples_section">
+    <h2 class="section_title">Writing Samples
+        <span class="disclaimer">** "Due to the sensitive and sometimes confidential nature of my current position, I am unable to provide specific examples of some of my work" **</span>
+    </h2>
+    <section id="samples" class="samples_content content">
+        <ul class="samples_content__list">
+            <li class="samples_content__list-item">
+                <div id="online" class="samples_content__title">{{{data.pageSections.4.section.title}}}</div>
+            </li>
+
+            <li class="sample_list">
+                <p>These are links to formatted samples.</p>
+                {{{data.pageSections.4.section.content}}}
+                <span class="desktop-close-list">Close Internal Samples List</span>
+            </li>
+
+            <li class="samples_content__list-item">
+                <div id="online" class="samples_content__title">{{{data.pageSections.5.section.title}}}</div>
+            </li>
+
+            <li class="sample_list">
+                <p>These are links to external examples of work. They will open in a new window.</p>
+                {{{data.pageSections.5.section.content}}}
+                <span class="desktop-close-list">Close External Samples List</span>
+            </li>
+
+            <li class="samples_content__list-item">
+                <div id="online" class="samples_content__title">{{{data.pageSections.6.section.title}}}</div>
+            </li>
+
+            <li class="sample_list">
+                <p>These documents consist of files to download such as PDFs, Word Docs, etc.</p>
+                {{{data.pageSections.6.section.content}}}
+                <span class="desktop-close-list">Close Download List</span>
+            </li>
+
+            <!--<li class="samples_content__list-item">
+                <div id="external" class="samples_content__title">External Links</div>
+            </li>
+            <li class="sample_list">
+                <ul id="external-samples" class="sample_content__container" data-name="External Links">
+                    <li class="sample_content__description">
+                        <p>These are links to external examples of work. They will open in a new window.</p>
+                    </li>
+                    <li><a href="http://www.indianapolisrecorder.com/opinion/article_d1729de4-6039-11e4-8666-772d060c5302.html" target="_blank" class="sample-content__sample-link">Opinion Piece - Indianapolis Recorder</a> </li>
+                    <li><a href="http://www.indianapolisrecorder.com/aroundtown/article_5c5b09c0-4fb7-11e4-9cae-2f3b2686f0e3.html" target="_blank" class="sample-content__sample-link">Interview with Bashiri Asad</a> </li>
+                    <li><a href="https://www.countable.us/bills/hr5263-113" target="_blank" class="sample-content__sample-link">Ending Discrimination Against Living Organ Donors</a> </li>
+                    <li><a href="https://www.countable.us/bills/hr2224-113" target="_blank" class="sample-content__sample-link">HR 2224 - Bill Summary at Countable US</a> </li>
+                    <li><a href="https://www.countable.us/bills/hr4315-113" target="_blank" class="sample-content__sample-link">HR 4315 - Bill Summary at Countable US</a> </li>
+                    <li><a href="http://www.indymojo.com/preview-a-tribe-called-red-eiteljorg/" target="_blank" class="sample-content__sample-link">ATCR</a></li>
+                    <li><a href="http://www.indyintune.com/blog/blogarchive.asp?article=1017" target="_blank" class="sample-content__sample-link">JUEN</a></li>
+                    <li><a href="http://www.indymojo.com/concert-review-boombox-kaleidoscope-jukebox-at-the-vogue-theater/" target="_blank" class="sample-content__sample-link">Boombox Review</a></li>
+                    <li><a href="http://www.indyintune.com/blog/blogarchive.asp?article=1002" target="_blank" class="sample-content__sample-link">Terri Nunn (Berlin)</a></li>
+                    <li><a href="http://www.indymojo.com/all-around-the-wheel-house-a-review-of-indys-1st-all-edm-festival/" target="_blank" class="sample-content__sample-link">Wheelhouse Review</a></li>
+                    <li><a href="http://www.indyintune.com/blog/blogarchive.asp?article=581" target="_blank" class="sample-content__sample-link">Gringo Star</a></li>
+                    <li><a href="http://www.indymojo.com/tags/six-four-commodore/" target="_blank" class="sample-content__sample-link">Six 4 Commodore</a></li>
+                    <li><a href="http://sidetrack.me/top-6-things-flooded-social-media-today/" target="_blank" class="sample-content__sample-link">Sidetrack.Me Article 1</a></li>
+                    <li><a href="http://sidetrack.me/bookmark-page/" target="_blank" class="sample-content__sample-link">Sidetrack.Me Article 2</a></li>
+                    <span class="desktop-close-list">Close External Samples List</span>
+                </ul>
+            </li>
+
+            <li class="samples_content__list-item">
+                <div id="pdfs" class="samples_content__title">Document Downloads</div>
+            </li>
+            <li class="sample_list">
+                <ul id="pdfs-samples" class="sample_content__container" data-name="Document Downloads">
+                    <li class="sample_content__description">
+                        <p>These documents consist of files to download such as PDFs, Word Docs, etc.</p>
+                    </li>
+                    <li><a href="doc/Medical_Savings_Press_Release.doc" class="sample-content__sample-link" target="_blank">Medical Savings Press Release</a></li>
+                    <li><a href="doc/STANDARD_LIFE_RELEASE_12-18.pdf" class="sample-content__sample-link" target="_blank">Life Insurance Press Release</a></li>
+                    <li><a href="doc/UCC_II.pdf" class="sample-content__sample-link" target="_blank">Auto Insurer Press Release</a></li>
+                    <li><a href="doc/renters_ins_college.pdf" class="sample-content__sample-link" target="_blank">Renters Insurance Press Release</a></li>
+                    <li><a href="doc/IDOI_shut_down.pdf" class="sample-content__sample-link" target="_blank">IDOI Shut Down Press Release</a></li>
+                    <span class="desktop-close-list">Close Document Samples List</span>
+                </ul>
+            </li>-->
+
+        </ul>
+        <div class="samples_content__close-list">
+            <span class="samples_content__list-name"></span>
+        </div>
+    </section>
+</section>

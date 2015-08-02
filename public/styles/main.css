@@ -128,6 +128,9 @@ header {
     display: none;
   }
 }
+.desktop_nav ul {
+  list-style: none;
+}
 .desktop_nav ul li a {
   background-color: #ffffff;
   border-top: 1px solid #e8e8e8;
